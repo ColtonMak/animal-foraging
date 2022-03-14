@@ -1,5 +1,3 @@
-;;pspawn is the probablility of anything spawning
-;;ppred is the probability of predators spawning
 
 globals [
   ltot
@@ -21,8 +19,6 @@ to setup
 
   ask patches [
     set pcolor white
-
-    ;;random spawning process
     if random-float 1.0 < pspawn [
       ifelse random-float 1.0 < ppred [
         sprout-wolves 1 [set color red]
@@ -31,9 +27,6 @@ to setup
         sprout-rabbits 1 [set color green]
       ]
     ]
-
-
-
   ]
 
 
